@@ -6,18 +6,24 @@
 <title>Ramesh Suyash | LIC Consultant</title>
 
 <style>
+:root{
+    --gold:#e6c36a;
+    --dark:#020617;
+    --glass:rgba(255,255,255,0.06);
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: "Segoe UI", system-ui, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 body{
     background:
-        radial-gradient(circle at top left, #1a2a3a, #000),
-        linear-gradient(180deg, #000, #020617);
-    color:#ffffff;
+        radial-gradient(circle at top right, #1b2b3a, #000),
+        linear-gradient(180deg, #000, var(--dark));
+    color:#fff;
     overflow-x:hidden;
 }
 
@@ -31,170 +37,164 @@ nav{
     justify-content:space-between;
     align-items:center;
     background:rgba(0,0,0,0.65);
-    backdrop-filter: blur(12px);
-    border-bottom:1px solid rgba(230,195,106,0.2);
+    backdrop-filter: blur(14px);
+    border-bottom:1px solid rgba(230,195,106,0.25);
     z-index:1000;
 }
 
 nav h1{
     font-size:22px;
     letter-spacing:1px;
-    color:#e6c36a;
+    color:var(--gold);
 }
 
 nav span{
-    font-size:14px;
+    font-size:13px;
     color:#bbb;
 }
 
 /* ===== HERO ===== */
 .hero{
     min-height:100vh;
-    padding:140px 8% 100px;
+    padding:150px 8% 100px;
     display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:60px;
+    grid-template-columns:1.4fr 1fr;
+    gap:70px;
     align-items:center;
 }
 
-.hero-text h2{
-    font-size:52px;
-    line-height:1.15;
+.hero h2{
+    font-size:56px;
+    line-height:1.1;
     font-weight:600;
 }
 
-.hero-text h2 span{
-    color:#e6c36a;
+.hero h2 span{
+    color:var(--gold);
 }
 
-.hero-text p{
-    margin:25px 0;
-    max-width:550px;
+.hero p{
+    margin:28px 0;
+    max-width:560px;
     font-size:17px;
-    color:#cfcfcf;
+    color:#d0d0d0;
 }
 
-.hero-buttons a{
+.hero a{
     display:inline-block;
-    padding:15px 32px;
-    margin-right:15px;
-    border-radius:40px;
-    font-weight:500;
+    padding:15px 34px;
+    border-radius:50px;
     text-decoration:none;
+    font-weight:500;
+    margin-right:16px;
     transition:0.3s ease;
 }
 
 .btn-gold{
-    background:linear-gradient(135deg,#e6c36a,#caa13a);
+    background:linear-gradient(135deg,var(--gold),#caa13a);
     color:#000;
 }
 
 .btn-outline{
-    border:1px solid #e6c36a;
-    color:#e6c36a;
+    border:1px solid var(--gold);
+    color:var(--gold);
 }
 
-.hero-buttons a:hover{
+.hero a:hover{
     transform:translateY(-3px);
 }
 
-/* ===== PREMIUM CARD (NO IMAGE) ===== */
-.premium-card{
-    height:420px;
-    border-radius:28px;
-    background:
-        linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+/* ===== SIGNATURE PREMIUM PANEL ===== */
+.signature-box{
+    padding:55px 45px;
+    border-radius:30px;
+    background:var(--glass);
+    border:1px solid rgba(255,255,255,0.12);
     backdrop-filter: blur(18px);
-    border:1px solid rgba(230,195,106,0.35);
     box-shadow:
-        0 0 40px rgba(230,195,106,0.25),
+        0 0 45px rgba(230,195,106,0.25),
         inset 0 0 30px rgba(255,255,255,0.03);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px;
 }
 
-.premium-card h3{
+.signature-box h3{
     font-size:26px;
-    color:#e6c36a;
-    margin-bottom:15px;
+    color:var(--gold);
+    margin-bottom:18px;
 }
 
-.premium-card p{
+.signature-box p{
     font-size:16px;
-    color:#d5d5d5;
-    line-height:1.6;
+    color:#ddd;
+    line-height:1.7;
 }
 
 /* ===== SECTIONS ===== */
 section{
-    padding:100px 8%;
+    padding:110px 8%;
 }
 
 .section-title{
-    font-size:38px;
-    margin-bottom:45px;
+    font-size:40px;
+    margin-bottom:50px;
 }
 
 .section-title span{
-    color:#e6c36a;
+    color:var(--gold);
 }
 
 /* ===== SERVICES ===== */
 .services{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
+    gap:35px;
 }
 
-.service-box{
-    padding:35px;
-    border-radius:22px;
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(255,255,255,0.08);
-    transition:0.4s;
+.service{
+    padding:38px;
+    border-radius:24px;
+    background:var(--glass);
+    border:1px solid rgba(255,255,255,0.12);
+    transition:0.4s ease;
 }
 
-.service-box:hover{
+.service:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 35px rgba(230,195,106,0.25);
+    box-shadow:0 0 40px rgba(230,195,106,0.28);
 }
 
-.service-box h4{
+.service h4{
     font-size:20px;
-    margin-bottom:12px;
-    color:#e6c36a;
+    color:var(--gold);
+    margin-bottom:14px;
 }
 
-.service-box p{
+.service p{
     font-size:15px;
-    color:#ccc;
+    color:#cfcfcf;
 }
 
 /* ===== CONTACT ===== */
-.contact-box{
-    max-width:650px;
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(255,255,255,0.08);
-    padding:45px;
-    border-radius:26px;
-    box-shadow:0 0 40px rgba(0,0,0,0.6);
+.contact{
+    max-width:680px;
+    padding:55px;
+    border-radius:30px;
+    background:var(--glass);
+    border:1px solid rgba(255,255,255,0.12);
+    box-shadow:0 0 45px rgba(0,0,0,0.6);
 }
 
-.contact-box p{
+.contact p{
     font-size:18px;
-    margin:16px 0;
+    margin:18px 0;
 }
 
 /* ===== FOOTER ===== */
 footer{
-    padding:35px;
     text-align:center;
+    padding:40px;
     font-size:14px;
     color:#888;
-    border-top:1px solid rgba(255,255,255,0.06);
+    border-top:1px solid rgba(255,255,255,0.08);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -211,60 +211,56 @@ footer{
 
 <nav>
     <h1>LIC Consultant</h1>
-    <span>Trust • Security • Government Backed</span>
+    <span>Trust • Security • Government Assurance</span>
 </nav>
 
 <section class="hero">
-    <div class="hero-text">
+    <div>
         <h2>Ramesh <span>Suyash</span></h2>
         <p>
-            Providing transparent, reliable and long-term insurance solutions
-            through Life Insurance Corporation of India. Your future deserves
-            stability, trust and experience.
+            Helping families secure their future through reliable, transparent
+            and government-backed insurance solutions from Life Insurance
+            Corporation of India.
         </p>
-        <div class="hero-buttons">
-            <a href="#contact" class="btn-gold">Contact Now</a>
-            <a href="#services" class="btn-outline">Our Services</a>
-        </div>
+        <a href="#contact" class="btn-gold">Contact Now</a>
+        <a href="#services" class="btn-outline">View Services</a>
     </div>
 
-    <div class="premium-card">
-        <div>
-            <h3>LIC Authorised Consultant</h3>
-            <p>
-                Decades of trust, government assurance and personalised guidance
-                to help you protect your family, plan retirement and invest with
-                confidence.
-            </p>
-        </div>
+    <div class="signature-box">
+        <h3>LIC Authorised Consultant</h3>
+        <p>
+            A symbol of long-term trust and financial discipline.  
+            Focused on protection, retirement planning and secure investments
+            that stand strong across generations.
+        </p>
     </div>
 </section>
 
 <section id="services">
-    <h2 class="section-title">Our <span>Services</span></h2>
+    <h2 class="section-title">Our <span>Expertise</span></h2>
     <div class="services">
-        <div class="service-box">
+        <div class="service">
             <h4>Life Insurance</h4>
-            <p>Comprehensive protection plans ensuring family security.</p>
+            <p>Reliable protection plans ensuring family security and peace of mind.</p>
         </div>
-        <div class="service-box">
+        <div class="service">
             <h4>Retirement Planning</h4>
-            <p>Stable income solutions for a peaceful retired life.</p>
+            <p>Stable and guaranteed income solutions for a dignified retirement.</p>
         </div>
-        <div class="service-box">
+        <div class="service">
             <h4>Child Plans</h4>
-            <p>Financial support for education and future milestones.</p>
+            <p>Strategic financial planning for education and future milestones.</p>
         </div>
-        <div class="service-box">
-            <h4>Investment Plans</h4>
+        <div class="service">
+            <h4>Investment Solutions</h4>
             <p>Government-backed savings and wealth-building options.</p>
         </div>
     </div>
 </section>
 
 <section id="contact">
-    <h2 class="section-title">Contact <span>Information</span></h2>
-    <div class="contact-box">
+    <h2 class="section-title">Contact <span>Details</span></h2>
+    <div class="contact">
         <p><strong>📞 Phone:</strong> +91 95603 96770</p>
         <p><strong>📞 Phone:</strong> +91 95404 67504</p>
         <p><strong>📧 Email:</strong> rameshsuyash@gmail.com</p>
@@ -280,7 +276,7 @@ footer{
 <script>
 document.addEventListener("mousemove", e=>{
     document.body.style.backgroundPosition =
-        `${e.clientX/90}px ${e.clientY/90}px`;
+        `${e.clientX/100}px ${e.clientY/100}px`;
 });
 </script>
 
